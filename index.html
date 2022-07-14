@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>
+            Face Recognition App
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="//unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <link href="style.css" rel="stylesheet"></link>
+        <script src="main.js"></script>
+        <script type="text/javascript" src="~/Scripts/webcam.min.js"></script>
+    </head>
+    <body>
+        <center>
+            <h1>
+                Face Recognition Web App
+            </h1>
+            <br>
+            <h3>This Model is trained to identify the objects listed below</h3>
+            <br>
+            <h4 class="btn btn-info"> Dad <span></h4>
+                <h4 class="btn btn-success"> Mom </h4>
+                <h4 class="btn btn-info"> Sister </h4>
+                <h4 class="btn btn-success"> Cat </h4>
+                <h4 class="btn btn-info"> Me </h4>
+            </span>
+            <br>
+            <hr>
+            <div id="webcam"></div>
+            <br>
+            <div id="output"></div>
+            <br>
+            <br>
+            <button onclick="capture();" class="btn btn-warning">Capture Image</button>
+            <br>
+            <br>
+            <button onclick="identify();" class="btn btn-danger">Identify Image</button>
+            <br>
+            <hr>
+            <br>
+            <h4> Object: <span id="object_row"></span></h4>
+            <br>
+            <h4> Accuracy: <span id="accuracy_row"></span></h4>
+        </center>
+    </body>
+    <script type="text/javascript" src="~/Scripts/webcam.min.js"></script>
+<script language="JavaScript">
+    Webcam.set({
+        width: 320,
+        height: 240,
+        image_format: 'jpeg',
+        jpeg_quality: 90
+    });
+     Webcam.attach('#Webcam');
+</script>
+</html>
